@@ -18,7 +18,7 @@ LINE STORE で LINE スタンプを画像をクリックすると、画像の UR
 1. https://store.line.me/stickershop/product/ のページを開く
 2. 任意のスタンプ画像をクリックする
 3. 画像の URL が画面右上に表示される
-4. URL テキストをクリックしてコピー
+4. URL テキストをクリックしてコピーする
 5. Open ボタンをクリックすると、別タブで URL を開く
 
 ## ファイル構成

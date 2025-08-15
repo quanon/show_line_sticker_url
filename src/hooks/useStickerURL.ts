@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { StickerImage } from '../types';
 
 export const useStickerURL = () => {
   const [currentURL, setCurrentURL] = useState<string | null>(null);
