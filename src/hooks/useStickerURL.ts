@@ -27,8 +27,13 @@ export const useStickerURL = () => {
     }
   }, [extractURL]);
 
+  const hideURL = useCallback(() => {
+    setCurrentURL(null);
+  }, []);
+
   return {
     currentURL,
-    showURL
+    showURL,
+    hideURL
   };
 };

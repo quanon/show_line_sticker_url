@@ -3,7 +3,7 @@ import StickerURLDisplay from './components/StickerURLDisplay';
 import { useStickerURL } from './hooks/useStickerURL';
 
 const StickerURLApp: React.FC = () => {
-  const { currentURL, showURL } = useStickerURL();
+  const { currentURL, showURL, hideURL } = useStickerURL();
 
   useEffect(() => {
     const handleImageClick = (event: Event) => {
@@ -66,6 +66,31 @@ const StickerURLApp: React.FC = () => {
       observer.disconnect();
     };
   }, [showURL]);
+
+  useEffect(() => {
+    const handleDocumentClick = (event: MouseEvent) => {
+      const target = event.target as Element;
+      
+      // Check if click is on a sticker image
+      if (target.closest('.FnImage')) {
+        return;
+      }
+      
+      // Check if click is on the URL display component
+      if (target.closest('.line-sticker-url')) {
+        return;
+      }
+      
+      // Hide the URL display if clicked elsewhere
+      hideURL();
+    };
+
+    document.addEventListener('click', handleDocumentClick);
+
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [hideURL]);
 
   return (
     <>
