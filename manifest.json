@@ -10,7 +10,7 @@
     {
       "matches": ["https://store.line.me/stickershop/product/*"],
       "css": ["daisyui.css"],
-      "js": ["content.js"],
+      "js": ["dist/content.js"],
       "run_at": "document_end"
     }
   ],
