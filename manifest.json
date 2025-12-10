@@ -8,7 +8,10 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://store.line.me/stickershop/product/*"],
+      "matches": [
+        "https://store.line.me/stickershop/product/*",
+        "https://store.line.me/emojishop/product/*"
+      ],
       "css": ["daisyui.css"],
       "js": ["dist/content.js"],
       "run_at": "document_end"
